@@ -1,0 +1,72 @@
+/* Import all styles */
+@import './global.css';
+@import './layout.css';
+@import './navbar.css';
+@import './hero.css';
+@import './home.css';
+@import './project-card.css';
+@import './experience.css';
+@import './skills.css';
+@import './certifications.css';
+@import './contact.css';
+@import './not-found.css';
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-200);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--gray-800);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Print styles */
+@media print {
+  .no-print,
+  .navbar,
+  .footer {
+    display: none !important;
+  }
+  
+  body {
+    padding: 0;
+    background: white;
+    color: black;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .section {
+    padding: 1rem 0;
+    page-break-inside: avoid;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid #eee;
+    page-break-inside: avoid;
+  }
+}
